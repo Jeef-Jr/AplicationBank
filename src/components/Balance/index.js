@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 export default function Balance() {
   return (
@@ -14,7 +16,7 @@ export default function Balance() {
       </View>
       <View style={styles.row}>
         <TouchableOpacity style={styles.item}>
-          <Feather style={styles.icons} name="eye" size={30} color="#000" />
+          <FontAwesomeIcon style={styles.icons} icon={faEye} size={30} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.item}>
           <Feather

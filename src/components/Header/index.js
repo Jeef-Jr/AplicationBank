@@ -17,9 +17,17 @@ export default function Header() {
     <View style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.username}>Jefferson Filho</Text>
-        <TouchableOpacity style={styles.buttonUser}>
-          <Feather name="user" size={27} color="#fff" />
-        </TouchableOpacity>
+        <View style={styles.row}>
+          <TouchableOpacity style={styles.buttonUser}>
+            <View style={styles.notify}>
+              <Text style={styles.TextNotify}>1</Text>
+            </View>
+            <Feather name="bell" size={27} color="#fff" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonUser}>
+            <Feather name="user" size={27} color="#fff" />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -50,6 +58,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: "100%",
-    padding: 10,
+    padding: 5,
+    marginHorizontal: 3,
+  },
+  row: {
+    flexDirection: "row",
+  },
+  notify: {
+    zIndex: 1,
+    backgroundColor: "#000",
+    borderRadius: "100%",
+    position: "absolute",
+    width: 20,
+    alignItems: "center",
+    bottom: 25,
+    right: 5,
+  },
+  TextNotify: {
+    margin: 3,
+    color: "#ffca3a",
   },
 });
